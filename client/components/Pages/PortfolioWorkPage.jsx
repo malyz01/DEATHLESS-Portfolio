@@ -5,6 +5,7 @@ import PortfolioPagesHeader from "./PortfolioPagesHeader"
 import Footer from "../Footer"
 import PopUpBox from "./PopUpBox"
 import PortPageNav from "../PortPageNav"
+import SocialMediaNav from '../SocialMediaNav'
 
 const images = [
   { id: 1, thumbnail: "/IMAGES/Portfolio-Work-Pics/1-1.jpg", fullSize: "/IMAGES/Portfolio-Work-Pics/1-2.jpg" },
@@ -45,8 +46,9 @@ class PortfolioWorkPage extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div className="pageBackPic">
+        <div className="headerPic">
         <PortPageNav />
+        <SocialMediaNav />
           <PortfolioPagesHeader />
           <div className="portfolioPics">
             {images.map((image, index) => {
@@ -60,9 +62,9 @@ class PortfolioWorkPage extends React.Component {
                 </a>
               )
             })}
-          </div>
-        </div>
+          </div> 
         <Footer />
+        </div>
         {this.state.popupImageId !== null && (
           <PopUpBox
             togglePopup={() => this.togglePopup(null)} 

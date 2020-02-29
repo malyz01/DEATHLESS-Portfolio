@@ -19,7 +19,7 @@ class ComPageNav extends React.Component {
     render() {
         return (
             <div>
-<div id="comNav">
+<div className="pageNav">
 <a onClick={() => this.setPopup(this.comNav)}>≡­­­</a>
 </div>
 {this.state.popupIsShowing && <PopUpNav content={this.popupContent} togglePopup={this.togglePopup}/>}
@@ -34,11 +34,13 @@ setPopup = (content) => {
 }
 
 comNav = (
-      <div id="comNavLinks">
+      <div className="comNavLinks">
       <ul>
          <div className="gradient"><li><Link to='/'>Home</Link></li></div>
          <div className="gradient"><li><Link to='/Portfolio'>Portfolio</Link></li></div>
          <div className="gradient"><li><Link to='/Shop'>Shop</Link></li></div>
+         <div className="gradient"><li><Link to='/Contact'>Contact Me</Link></li></div>
+        <div className="gradient"><li><Link to='/About'>About Me</Link></li></div>
           </ul>
           </div>
 )  
